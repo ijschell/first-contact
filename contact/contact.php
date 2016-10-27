@@ -1,11 +1,11 @@
 <?php
-function sendMail($mail, $name, $lastname){
+function sendMail($mail, $name){
 
-  $enviar_a = 'jonathan.schell@portlike.com';
-  $desde = 'jonathan.schell@portlike.com';
+  $enviar_a = $mail;
+  $desde = 'jschell.21.09.87@gmail.com';
   $nombre_desde = 'Forms Popular';
 
-  $body_mail = contact($mail, $name, $lastname);
+  $body_mail = contact($mail, $name);
 
   $subject = 'Subject';
 
@@ -22,7 +22,7 @@ function sendMail($mail, $name, $lastname){
   //$mail->SMTPDebug = 2;
 
   //Correo para usar de motor
-  $mail->Username = "motor@gmail.com";
+  $mail->Username = "motor@gmail";
   $mail->Password = "contraseña";
 
   $mail->IsHTML(true); // if you are going to send HTML formatted emails
@@ -39,15 +39,12 @@ function sendMail($mail, $name, $lastname){
 
 }
 
-function contact($mail, $name, $lastname){
+//Aquí armo el copy
+function contact($mail, $name){
   return '<p>Mensaje desde <b>Forms Popular</b><table>
     <tr>
       <td>Nombre: </td>
       <td>'.$name.'</td>
-    </tr>
-    <tr>
-      <td>Apellido: </td>
-      <td>'.$lastname.'</td>
     </tr>
     <tr>
       <td>E-Mail: </td>

@@ -4,21 +4,20 @@ include 'connect.php';
 
 // Datos a guardar en el ejemplo:
 // mail, nombre, apellido, para agregar hay que modificar un poco la función
-function insertRegister($database, $mail, $name, $lastname, $phone, $interest){
+function insertRegister($database, $name, $mail){
   $result = true;
 
-  if($mail == '' || $name == '' || $lastname == '' || $phone == '' || $interest == ''){
+  if($mail == '' || $name == ''){
     $result = false;
   }else {
+    $date = date('d/m/y');
     //inserto datos
-    $database->insert("registers", [
+    $database->insert("registros", [
     	"mail" => $mail,
     	"name" => $name,
-    	"lastname" => $lastname,
-      "phone" => $phone,
-      "interest" => $interest
+    	"date" => $date
     ]);
-
+    
     if($database->error()[1] != null){
       if($database->error()[1] == 1062){
         $result = 'repeat';
@@ -32,7 +31,7 @@ function insertRegister($database, $mail, $name, $lastname, $phone, $interest){
     echo 'Se registro correctamente.';
     //Envío mail ya que se registro correctamente.
     include '../contact/contact.php';
-    sendMail($mail, $name, $lastname);
+    sendMail($mail, $name);
 
   }elseif($result === false) {
     //Cuando hay algún problema al registrar
@@ -49,30 +48,14 @@ function insertRegister($database, $mail, $name, $lastname, $phone, $interest){
 //Presento los registros
 function selectRegisters($database){
   $datas = $database->select("registers", [
-	"id",
+	"name",
 	"mail",
-  "name",
-  "lastname"
+  "date"
   ]);
   //var_dump($datas);
   return $datas;
   //echo json_encode($datas);
 }
-
-//export to excel
-function exportToExcel($database){
-  $data = selectRegisters($database);
-
-  $fileName = "Registers-exported-" . date("d/m/Y") . ".xls";
-  header("Content-type: application/vnd.ms-excel");
-  header("Content-Disposition: attachment; filename=" . $fileName);
-  header("Pragma: no-cache");
-  header("Expires: 0");
-
-  printTableRegisters($database);
-
-}
-
 
 //print tabla registros
 function printTableRegisters($database){
