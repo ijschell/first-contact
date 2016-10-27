@@ -1,0 +1,366 @@
+/* -------- FONTS -------- */
+
+@font-face {
+    font-family: 'gotham_mediumregular';
+    src: url('../fonts/gotham-webfont.eot');
+    src: url('../fonts/gotham-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-webfont.woff') format('woff'),
+         url('../fonts/gotham-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-webfont.svg#gotham_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham_thinregular';
+    src: url('../fonts/gotham-tin-webfont.eot');
+    src: url('../fonts/gotham-tin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-tin-webfont.woff') format('woff'),
+         url('../fonts/gotham-tin-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-tin-webfont.svg#gotham_thinregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham_lightitalic';
+    src: url('../fonts/gotham-light-webfont.eot');
+    src: url('../fonts/gotham-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-light-webfont.woff') format('woff'),
+         url('../fonts/gotham-light-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-light-webfont.svg#gotham_lightitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_bolditalic';
+    src: url('../fonts/gotham-bold-italic-webfont.eot');
+    src: url('../fonts/gotham-bold-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-bold-italic-webfont.woff') format('woff'),
+         url('../fonts/gotham-bold-italic-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-bold-italic-webfont.svg#gotham_bolditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_lightregular';
+    src: url('../fonts/gotham_light-webfont.eot');
+    src: url('../fonts/gotham_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham_light-webfont.woff') format('woff'),
+         url('../fonts/gotham_light-webfont.ttf') format('truetype'),
+         url('../fonts/gotham_light-webfont.svg#gotham_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'gotham_bookregular';
+    src: url('../fonts/gotham_book-webfont.eot');
+    src: url('../fonts/gotham_book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham_book-webfont.woff') format('woff'),
+         url('../fonts/gotham_book-webfont.ttf') format('truetype'),
+         url('../fonts/gotham_book-webfont.svg#gotham_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+body.index{
+  background: #fff
+}
+a:hover, a:focus{
+  text-decoration: none
+}
+.special-font{
+  font-family: 'Montserrat', sans-serif;
+}
+input.form-control{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #8F8F8F;
+  background: #fff;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0 0 0 15px;
+  display: block;
+  outline: none;
+  border-radius: 0;
+  font-weight: lighter;
+}
+input.form-control:focus{
+  border-color: #9a9a9a;
+  box-shadow: none
+}
+.color-red{
+  color: #cf1f2e
+}
+.btn-popular-negative{
+  border-radius: 0;
+  padding: 11px 26px;
+  color: #fff;
+  background: #333;
+  position: relative;
+}
+.btn-popular-negative::before{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  background: #b71826;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease
+}
+.btn-popular-negative:hover::before{
+  width: 100%
+}
+.btn-popular-negative:hover, .btn-popular-negative:focus{
+  color: #fff
+}
+.btn-popular{
+  border-radius: 0;
+  padding: 11px 26px;
+  color: #fff;
+  background: #CF1F2E;
+  position: relative;
+}
+.btn-popular::before{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  background: #b71826;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease
+}
+.btn-popular:hover::before{
+  width: 100%
+}
+.btn-popular:hover, .btn-popular:focus{
+  color: #fff
+}
+.btn-lg{
+  font-size: 15px
+}
+.logo-popular{
+  background-image: url('../images/logo-popular.svg');
+  background-size: cover;
+  width: 209px;
+  height: 42px;
+  margin: 0;
+  text-indent: -10000px
+}
+.container-fluid{
+  max-width: 1176px
+}
+/*Inicio formulario*/
+header{
+  top: 0px;
+  display: block;
+  width: 100%;
+  z-index: 99;
+  padding: 8px 0;
+  border-bottom: 2px solid #1d67b8;
+  height: 56px;
+  background: #002c69;
+  position: relative;
+}
+header h1.logo-popular{
+  width: 189px;
+  height: 38px;
+}
+header .volver-link{
+  color: #fff;
+  line-height: 38px;
+  font-size: 17px;
+  text-transform: uppercase;
+  position: relative;
+  top: -14px;
+}
+header .volver-link .icon-rotate{
+  transform: rotateZ(90deg);
+  font-size: 40px;
+  position: relative;
+  top: 14px;
+  transition: all 0.5s ease;
+  left: 11px;
+}
+header .volver-link:hover > .icon-rotate{
+  color: #cc2e3e
+}
+header .link-tel{
+  color: #7baee7;
+  font-size: 17px;
+  margin-left: 25px;
+  position: relative;
+  top: 2px;
+}
+header .link-tel i{
+  position: relative;
+  top: 5px;
+  /*transition: all 0.5s ease*/
+}
+header .link-tel:hover i{
+  animation-name: phone;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+}
+@keyframes phone {
+  from {transform: rotateZ(10deg);}
+  to {transform: rotateZ(-10deg);}
+}
+.switch-lang{
+  background: #fff;
+  margin-left: 20px;
+  position: relative;
+  width: 46px;
+  height: 18px;
+  top: 11px
+}
+.switch-lang a{
+  position: absolute;
+  font-size: 12px;
+  padding: 4px;
+  line-height: 10px;
+  transition: all 0.5s ease;
+  top: 0;
+  background: #002c69;
+}
+.switch-lang a:first-child{
+  /*padding-right: 2px;*/
+  left: 0;
+}
+.switch-lang a:last-child{
+  /*padding-left: 2px;*/
+  right: 0;
+}
+.switch-lang a:hover{
+  color: #fff
+}
+.switch-lang a.active{
+  font-weight: bold;
+  background: #fff;
+  color: #cc2e3e !important
+}
+.bg{
+  height: 550px;
+  background-image: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.wrapper{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  padding-top: 56px
+}
+.wrapper .title{
+  padding: 119px 0 80px 0;
+}
+.roboto{
+  font-family: 'Roboto Slab', serif;
+}
+.wrapper .title h2{
+  font-size: 50px;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+.wrapper .box-cont-form{
+  background: #fff;
+  padding: 42px;
+  position: relative;
+}
+.wrapper .box-cont-form h3{
+  font-size: 25px;
+  color: #4b4b4b;
+  line-height: 150%;
+}
+.wrapper .box-cont-form .info-buy-car{
+  width: 394px;
+  text-align: center;
+  float: left;
+}
+.wrapper .box-cont-form .info-buy-car .special-name{
+  font-family: 'Roboto Slab', serif;
+  font-size: 80px;
+  color: #4b4b4b;
+  margin-top: 40px;
+  line-height: 78px;
+}
+.wrapper .box-cont-form .info-buy-car .special-name .reg{
+  font-size: 20px;
+  vertical-align: super;
+}
+.wrapper .box-cont-form .info-buy-car img{
+  margin-top: 60px;
+  width: 100%;
+}
+.wrapper .box-cont-form .form-car{
+  position: absolute;
+  width: 635px;
+  right: 25px;
+  top: -40px;
+  background: #ebebeb
+}
+.wrapper .box-cont-form .form-car .title-form{
+  background-image: url('../images/top-form.png');
+  width: 635px;
+  height: 85px;
+  box-sizing: border-box;
+  padding-top: 21px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  background-position: center center;
+  background-size: 100% 100%;
+  margin: 0
+}
+input.formu, select.formu{
+  font-family: 'gotham_lightitalic';
+  font-size: 20px;
+  color: #8F8F8F!important;
+  background: #fff;
+  float: left;
+  height: 50px;
+  width: 256px;
+  box-sizing: border-box;
+  padding: 14px;
+  margin: 8px 30px;
+  display: block;
+  outline: none;
+}
+select.formu{
+  width: calc(100% - 60px);
+}
+input.submit{
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  color: #fff;
+  background: #79a753;
+  width: 90%;
+  height: 65px;
+  border-bottom: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  margin: 16px auto 16px auto;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border-radius: 6px;
+}

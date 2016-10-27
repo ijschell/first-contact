@@ -1,0 +1,105 @@
+.cont-registers-admin table{
+  border: solid 1px #ccc
+}
+.cont-registers-admin table thead{
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+.cont-registers-admin table thead tr td{
+  padding: 20px
+}
+.cont-registers-admin table tbody{
+  text-align: center;
+}
+.cont-registers-admin table tbody tr td{
+  border: solid 1px #ccc;
+  border-bottom: none;
+  padding: 15px;
+}
+html, body{
+  height: 100%;
+}
+body{
+  background-image: url('../images/bg-header.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box-login{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 720px;
+  height: 400px;
+}
+.box-login .login{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 425px
+}
+.box-login .login .material-icons{
+  color: #d0d0d0;
+  font-size: 26px;
+  margin: 12px;
+}
+.sep-form-admin{
+  margin-bottom: 20px
+}
+.cont-registers-admin{
+  background: #fff;
+  padding: 15px 30px;
+  margin-top: 15px
+}
+.logoutbar{
+  padding: 15px;
+  background: #213469;
+  height: 72px;
+}
+.title-admin{
+  padding: 70px 0
+}
+.title-admin h2{
+  color: #fff;
+  font-size: 49px;
+  text-align: center;
+  font-family: 'gotham_mediumregular'
+}
+.position-alert-admin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -272px);
+}
+.form-control-xs{
+  height: 33px !important;
+  width: 200px;
+  display: inline-block !important;
+  margin: 0 2px 0 2px;
+  font-size: 15px !important;
+  border-radius: 0 !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+  padding: 0px 10px;
+}
+#footerAdmin{
+  padding: 20px 0
+}
+#footerAdmin p{
+  color: #fff;
+  line-height: 50px
+}
+.popular-ico{
+  width: 50px;
+  height: 50px
+}
+.footer-login{
+  position: absolute;
+  bottom: 0;
+  width: 1117px
+}
