@@ -4,7 +4,7 @@ include 'connect.php';
 
 // Datos a guardar en el ejemplo:
 // mail, nombre, apellido, para agregar hay que modificar un poco la función
-function insertRegister($database, $name, $mail){
+function insertRegister($database, $name, $mail, $sitio){
   $result = true;
 
   if($mail == '' || $name == ''){
@@ -15,7 +15,8 @@ function insertRegister($database, $name, $mail){
     $database->insert("registros", [
     	"mail" => $mail,
     	"name" => $name,
-    	"date" => $date
+    	"date" => $date,
+      "sitio" => $sitio
     ]);
 
     if($database->error()[1] != null){
@@ -31,7 +32,7 @@ function insertRegister($database, $name, $mail){
     echo 'Se registro correctamente.';
     //Envío mail ya que se registro correctamente.
     include '../contact/contact.php';
-    sendMail($mail, $name);
+    sendMail($mail, $name, $sitio);
 
   }elseif($result === false) {
     //Cuando hay algún problema al registrar
@@ -50,7 +51,8 @@ function selectRegisters($database){
   $datas = $database->select("registros", [
 	"name",
 	"mail",
-  "date"
+  "date",
+  "sitio"
   ]);
   //var_dump($datas);
   return $datas;
@@ -71,6 +73,9 @@ function printTableRegisters($database){
           Mail
         </td>
         <td>
+          ¿Sitio?
+        </td>
+        <td>
           Fecha
         </td>
       </tr>
@@ -87,6 +92,9 @@ function printTableRegisters($database){
           </td>
           <td>
             <?php echo $registro['mail']?>
+          </td>
+          <td>
+            <?php echo $registro['sitio']?>
           </td>
           <td>
             <?php echo $registro['date']?>

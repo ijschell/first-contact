@@ -18,6 +18,9 @@
               <form id="form" action="index.html" method="post">
                 <input placeholder="Empresa" type="text" class="formu" name="name" value="" data-validation="required" data-validation-error-msg="Nombre es requerido">
                 <input placeholder="Email" type="text" class="formu" name="mail" value="" data-validation="required" data-validation="email" data-validation-error-msg="El correo es requerido">
+                <p class="pull-left" style="margin: 32px">
+                  <input type="checkbox" name="sitio" value="si"> El cliente ya tiene web
+                </p>
                 <input type="submit" name="insert" value="Envíar" class="submit">
                 <div style="clear: both"></div>
               </form>

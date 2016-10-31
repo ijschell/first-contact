@@ -1,8 +1,14 @@
 <?php
 include 'functions.php';
 
-
 if(isset($_POST['insert'])){
-  insertRegister($database, $_POST['mail'],$_POST['name']);
+
+  if(isset($_POST['sitio'])){
+    $sitio = 'si';
+  }else {
+    $sitio = 'no';
+  }
+  
+  insertRegister($database, $_POST['mail'],$_POST['name'], $sitio);
 }
 ?>
