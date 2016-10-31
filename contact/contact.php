@@ -23,7 +23,7 @@ function sendMail($mail, $name, $sitio){
 
   //Correo para usar de motor
   $mail->CharSet = 'UTF-8';
-  $mail->Username = "hi@thecodingbear.com";
+  $mail->Username = "jschell.21.09.87@gmail.com";
   $mail->Password = "J0n4th4n";
 
   $mail->IsHTML(true); // if you are going to send HTML formatted emails

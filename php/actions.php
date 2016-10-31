@@ -8,7 +8,7 @@ if(isset($_POST['insert'])){
   }else {
     $sitio = 'no';
   }
-  
-  insertRegister($database, $_POST['mail'],$_POST['name'], $sitio);
+
+  insertRegister($database, $_POST['name'], $_POST['mail'], $sitio);
 }
 ?>
