@@ -5,7 +5,7 @@ function sendMail($mail, $name, $sitio){
   $desde = 'hi@thecodingbear.com';
   $nombre_desde = 'The Coding Bear';
 
-  $body_mail = contact($mail, $name);
+  $body_mail = contact($mail, $name, $sitio);
 
   $subject = 'Estimado equipo de '.$name;
 
