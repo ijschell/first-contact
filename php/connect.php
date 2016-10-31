@@ -3,10 +3,10 @@ require  'medoo.php';
 
 $database = new medoo([
 	'database_type' => 'mysql',
-	'database_name' => 'git',
+	'database_name' => 'first-contact',
 	'server' => 'localhost',
-	'username' => 'admin',
-	'password' => 'admin',
+	'username' => 'first-contact-us',
+	'password' => 'wGTKY1EW',
 	'charset' => 'utf8',
 ]);
 ?>

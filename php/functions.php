@@ -17,7 +17,7 @@ function insertRegister($database, $name, $mail){
     	"name" => $name,
     	"date" => $date
     ]);
-    
+
     if($database->error()[1] != null){
       if($database->error()[1] == 1062){
         $result = 'repeat';
@@ -47,7 +47,7 @@ function insertRegister($database, $name, $mail){
 
 //Presento los registros
 function selectRegisters($database){
-  $datas = $database->select("registers", [
+  $datas = $database->select("registros", [
 	"name",
 	"mail",
   "date"
@@ -65,16 +65,13 @@ function printTableRegisters($database){
     <thead>
       <tr>
         <td>
-          ID
-        </td>
-        <td>
           Nombre
         </td>
         <td>
-          Apellido
+          Mail
         </td>
         <td>
-          Mail
+          Fecha
         </td>
       </tr>
     </thead>
@@ -86,16 +83,13 @@ function printTableRegisters($database){
         ?>
         <tr>
           <td>
-            <?php echo $registro['id']?>
-          </td>
-          <td>
             <?php echo $registro['name']?>
           </td>
           <td>
-            <?php echo $registro['lastname']?>
+            <?php echo $registro['mail']?>
           </td>
           <td>
-            <?php echo $registro['mail']?>
+            <?php echo $registro['date']?>
           </td>
         </tr>
         <?php

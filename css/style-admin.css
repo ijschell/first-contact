@@ -20,28 +20,22 @@
 html, body{
   height: 100%;
 }
-body{
-  background-image: url('../images/bg-header.jpg');
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .box-login{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
-  width: 720px;
-  height: 400px;
+  background: #eee;
+  width: 573px;
+  height: 287px;
 }
 .box-login .login{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
-  width: 425px
+  width: 80%;
 }
 .box-login .login .material-icons{
   color: #d0d0d0;
@@ -58,7 +52,6 @@ body{
 }
 .logoutbar{
   padding: 15px;
-  background: #213469;
   height: 72px;
 }
 .title-admin{
@@ -102,4 +95,8 @@ body{
   position: absolute;
   bottom: 0;
   width: 1117px
+}
+.logintxt{
+  line-height: 50px;
+  font-size: 20px;
 }
